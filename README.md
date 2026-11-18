@@ -38,7 +38,7 @@ library/
 │  └─ img/favicon.svg
 ├─ tools/
 │  ├─ serve.mjs               # 本地预览服务器（零依赖）
-│  └─ check-data.mjs          # 校验 JSON 与文件路径（CI 会跑）
+│  └─ check-data.mjs          # 校验 JSON 与文件路径（本地手动跑）
 └─ docs/                      # 规划、字段说明、部署说明
 ```
 
@@ -67,7 +67,13 @@ JSON 里的 `url` 一律写成相对路径：`./resource/college/books/higher-ma
 }
 ```
 
-3. 推上去。CI 会先校验文件是否存在，再发布。
+3. 推上去，等 1 分钟左右 Pages 自动发布。
+
+提交前想先自查，可以本地跑一次：
+
+```bash
+node tools/check-data.mjs
+```
 
 只想先藏起来：条目里加 `"draft": true`。
 
@@ -75,19 +81,20 @@ JSON 里的 `url` 一律写成相对路径：`./resource/college/books/higher-ma
 
 ## 发布
 
-推荐用仓库自带的 Actions 工作流（`.github/workflows/deploy.yml`）：
+和主站一致：用 **Deploy from a branch**，不需要 Actions。
 
 1. 推代码到 `main`
-2. 仓库 **Settings → Pages → Build and deployment → Source** 选 **GitHub Actions**
-3. Actions 跑完后访问 `https://<用户名>.github.io/<仓库名>/`
+2. 仓库 **Settings → Pages → Build and deployment → Source** 选 **Deploy from a branch**
+3. Branch 选 `main`、目录选 `/ (root)`，点 Save
+4. 等 1～2 分钟，访问 `https://<用户名>.github.io/<仓库名>/`
 
-工作流会先跑 `node tools/check-data.mjs`：JSON 写错或文件路径对不上，部署直接中止，
-不会发一个坏站点上去。
+几点说明：
 
-不想用 Actions 也行：**Source** 选 **Deploy from a branch → main / (root)**，
-然后删掉 `.github/workflows/deploy.yml`，代价是没有路径校验。
+- 仓库根目录的 `.nojekyll` 会让 Pages **跳过 Jekyll、原样发布**。别删它：以后接 Pagefind 生成的 `_pagefind/`、`_headers`、`.well-known/` 都靠它才不会被静默忽略。
+- 分支部署**没有自动校验**。JSON 写错或路径大小写不对，页面会直接缺内容——所以提交前跑一下 `node tools/check-data.mjs` 比较稳。
+- 不要把 Actions 部署工作流加回来。之前那版 `.github/workflows/deploy.yml` 已经删除；它和分支部署同时存在时，每次推送会构建、部署两遍，既慢又容易看花眼。
 
-详细步骤、自定义域名、容量限制见 [docs/DEPLOY.md](docs/DEPLOY.md)。
+自定义域名、容量限制、常见问题见 [docs/DEPLOY.md](docs/DEPLOY.md)。
 
 ---
 
