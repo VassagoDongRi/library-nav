@@ -5,9 +5,6 @@
 
 纯静态、零构建：数据在 `data/*.json`，文件在 `resource/`，改完推上去就是最新。
 
-- 导航站回答「**去哪个网站**」
-- 书架回答「**这份文件在哪**」
-
 ---
 
 ## 目录结构
@@ -47,19 +44,6 @@ library/
 
 **路径约定**：`resource/<学段>/<类型>/<学科>/<文件>`
 JSON 里的 `url` 一律写成相对路径：`./resource/college/books/higher-mathematics/高等数学（上册）.pdf`
-
----
-
-## 本地预览
-
-```bash
-node tools/serve.mjs          # → http://localhost:8080
-```
-
-必须走 `http://`。双击 `index.html` 一定会是空白：`file://` 协议下浏览器禁止
-`fetch` 读 JSON、也禁止加载 ES Module，这不是代码的问题。
-
-没有 Node 的话，最省事的办法是直接推上去看线上——GitHub Pages 就是生产环境。
 
 ---
 
@@ -127,7 +111,7 @@ node tools/serve.mjs          # → http://localhost:8080
 
 ## 命名约定
 
-- 学段目录用 **`college`**（不是 `collage`，之前手滑的拼写照这个改）
+- 学段目录用 **`college`**
 - 学科目录用 kebab-case：`higher-mathematics`、`linear-algebra`、`program-design`
 - 类型目录与 `data/types.json` 的 `id` 完全一致：`books` / `exercise` / `notes` / `paper`
 - 文件名 = 卡片标题，中文没问题，GitHub Pages 支持 UTF-8 路径
