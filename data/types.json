@@ -1,0 +1,29 @@
+{
+  "_comment": "资料类型注册表。加一种类型＝这里加一项，筛选按钮和分组图标会自动出现。id 要与 resource/ 下的目录名一致。",
+  "types": [
+    {
+      "id": "books",
+      "name": "教材",
+      "icon": "book",
+      "desc": "课本 · 参考书"
+    },
+    {
+      "id": "exercise",
+      "name": "习题",
+      "icon": "pencil",
+      "desc": "课后题 · 题解"
+    },
+    {
+      "id": "notes",
+      "name": "笔记",
+      "icon": "note",
+      "desc": "课堂笔记 · 速查"
+    },
+    {
+      "id": "paper",
+      "name": "论文/试卷",
+      "icon": "paper",
+      "desc": "真题 · 模拟 · 报告"
+    }
+  ]
+}

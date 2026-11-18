@@ -1,0 +1,92 @@
+/* ==========================================================================
+   tokens.css — 设计令牌（只放变量，不放选择器规则）
+   --------------------------------------------------------------------------
+   改主题只改这里：
+     · 换纸色 → --bg / --surface
+     · 换主色 → --accent（墨绿）
+     · 换字体 → --serif / --sans
+   深色模式有两处需要同时改：data-theme="dark" 和「跟随系统」的媒体查询。
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ── 纸张与油墨 ───────────────────────────────────────────── */
+  --bg: #f6f4ef;          /* 页面底色：纸白，不用纯白 */
+  --surface: #fffefb;     /* 卡片、输入框 */
+  --surface-2: #efebe3;   /* 次级面：徽章底、hover */
+  --ink: #1b1a17;         /* 正文 */
+  --muted: #6d6a62;       /* 次要文字 */
+  --line: rgba(27, 26, 23, 0.09);
+  --line-strong: rgba(27, 26, 23, 0.18);
+
+  /* ── 强调色 ──────────────────────────────────────────────── */
+  --accent: #1f6f5c;      /* 墨绿：链接、选中、focus */
+  --accent-ink: #ffffff;
+  --amber: #b08347;       /* 琥珀：置顶、提示，只做小面积点缀 */
+  --danger: #a53f3a;
+
+  /* ── 字体 ────────────────────────────────────────────────── */
+  --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Consolas, monospace;
+
+  /* ── 尺度 ────────────────────────────────────────────────── */
+  --max: 1120px;
+  --topbar: 56px;
+  --r-card: 14px;
+  --r-pill: 999px;
+
+  /* ── 阴影与动效 ──────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(27, 26, 23, 0.04);
+  --shadow-md: 0 12px 30px -12px rgba(27, 26, 23, 0.22);
+  --shadow-lg: 0 24px 60px -20px rgba(27, 26, 23, 0.28);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --speed: 0.22s;
+}
+
+/* ── 深色模式：手动切换 ─────────────────────────────────────── */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0f1110;
+  --surface: #191d1b;
+  --surface-2: #232724;
+  --ink: #ecebe5;
+  --muted: #9a978f;
+  --line: rgba(236, 235, 229, 0.12);
+  --line-strong: rgba(236, 235, 229, 0.22);
+
+  --accent: #57c9a6;
+  --accent-ink: #06231b;
+  --amber: #d3a86a;
+  --danger: #e0837c;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 12px 30px -12px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+}
+
+/* ── 深色模式：跟随系统（未手动选择时才生效） ───────────────── */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    color-scheme: dark;
+
+    --bg: #0f1110;
+    --surface: #191d1b;
+    --surface-2: #232724;
+    --ink: #ecebe5;
+    --muted: #9a978f;
+    --line: rgba(236, 235, 229, 0.12);
+    --line-strong: rgba(236, 235, 229, 0.22);
+
+    --accent: #57c9a6;
+    --accent-ink: #06231b;
+    --amber: #d3a86a;
+    --danger: #e0837c;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 12px 30px -12px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+  }
+}

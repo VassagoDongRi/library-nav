@@ -1,0 +1,30 @@
+{
+  "site": {
+    "title": "书架",
+    "kicker": "LIBRARY",
+    "home": "https://nav.dongri.work/",
+    "homeLabel": "回到导航站",
+    "repo": "https://github.com/VassagoDongRi/library-nav",
+    "copyright": "© 2026 DongRi",
+    "author": {
+      "name": "信科 26 级 武岳平",
+      "email": "3471689252@qq.com",
+      "github": "https://github.com/VassagoDongRi"
+    }
+  },
+  "types": "data/types.json",
+  "stages": [
+    {
+      "id": "college",
+      "name": "大学",
+      "hint": "公共课 · 专业基础",
+      "file": "data/college.json"
+    },
+    {
+      "id": "senior",
+      "name": "高中",
+      "hint": "先把条目填进 data/senior.json，内容会自动出现在这里。",
+      "file": "data/senior.json"
+    }
+  ]
+}

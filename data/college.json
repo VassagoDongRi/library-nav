@@ -1,0 +1,319 @@
+{
+  "_demo": true,
+  "_comment": "示例数据：把 items 换成你自己的文件后，把 _demo 改成 false（或删掉这一行）。字段说明见 docs/DATA.md。",
+  "stage": "college",
+  "name": "大学",
+  "groups": [
+    {
+      "id": "higher-mathematics",
+      "name": "高等数学",
+      "abbr": "高",
+      "color": "#6b5b95",
+      "desc": "同济版 · 上下册 · 大一上",
+      "aliases": ["高数", "微积分"],
+      "subgroups": [
+        {
+          "id": "books",
+          "type": "books",
+          "name": "教材",
+          "items": [
+            {
+              "title": "高等数学（上册）",
+              "type": "books",
+              "url": "./resource/college/books/higher-mathematics/高等数学（上册）.pdf",
+              "desc": "极限、导数、积分与级数，含例题详解。",
+              "pages": "412 页",
+              "updated": "2026-09-12",
+              "tags": ["同济第七版", "大一上"],
+              "pinned": true
+            },
+            {
+              "title": "高等数学（下册）",
+              "type": "books",
+              "url": "./resource/college/books/higher-mathematics/高等数学（下册）.pdf",
+              "desc": "多元函数、重积分、曲线曲面积分与无穷级数。",
+              "pages": "388 页",
+              "updated": "2026-09-12",
+              "tags": ["同济第七版", "大一下"]
+            }
+          ]
+        },
+        {
+          "id": "exercise",
+          "type": "exercise",
+          "name": "习题",
+          "items": [
+            {
+              "title": "高数课后习题全解",
+              "type": "exercise",
+              "url": "./resource/college/exercise/higher-mathematics/高数课后习题全解.pdf",
+              "desc": "按章节编号，证明题附思路提示。",
+              "pages": "236 页",
+              "updated": "2026-09-20",
+              "tags": ["课后题"]
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "type": "notes",
+          "name": "笔记",
+          "items": [
+            {
+              "title": "高数公式速查表",
+              "type": "notes",
+              "url": "./resource/college/notes/higher-mathematics/高数公式速查表.html",
+              "desc": "极限、导数、积分公式一页纸，考前翻一遍就够。",
+              "pages": "6 节",
+              "updated": "2026-09-18",
+              "tags": ["速查", "考前"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linear-algebra",
+      "name": "线性代数",
+      "abbr": "线",
+      "color": "#2f6f8f",
+      "desc": "矩阵 · 行列式 · 特征值",
+      "aliases": ["线代"],
+      "subgroups": [
+        {
+          "id": "books",
+          "type": "books",
+          "name": "教材",
+          "items": [
+            {
+              "title": "线性代数（第六版）",
+              "type": "books",
+              "url": "./resource/college/books/linear-algebra/线性代数（第六版）.pdf",
+              "desc": "矩阵、行列式、向量组、特征值与二次型。",
+              "pages": "268 页",
+              "updated": "2026-09-15",
+              "tags": ["同济第六版"]
+            }
+          ]
+        },
+        {
+          "id": "exercise",
+          "type": "exercise",
+          "name": "习题",
+          "items": [
+            {
+              "title": "线代习题册答案",
+              "type": "exercise",
+              "url": "./resource/college/exercise/linear-algebra/线代习题册答案.pdf",
+              "desc": "含过程，重点标注了容易算错的地方。",
+              "pages": "152 页",
+              "updated": "2026-10-02",
+              "tags": ["习题册"]
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "type": "notes",
+          "name": "笔记",
+          "items": [
+            {
+              "title": "线代复习提纲",
+              "type": "notes",
+              "url": "./resource/college/notes/linear-algebra/线代复习提纲.html",
+              "desc": "按考点整理，附常见题型与解题步骤。",
+              "pages": "9 节",
+              "updated": "2026-10-08",
+              "tags": ["复习", "考点"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "program-design",
+      "name": "程序设计",
+      "abbr": "程",
+      "color": "#1f6f5c",
+      "desc": "C / C++ · 上机与题解",
+      "aliases": ["程设", "C 语言", "C++"],
+      "subgroups": [
+        {
+          "id": "books",
+          "type": "books",
+          "name": "教材",
+          "items": [
+            {
+              "title": "C Primer Plus（第 6 版）",
+              "type": "books",
+              "url": "./resource/college/books/program-design/C Primer Plus（第6版）.pdf",
+              "desc": "从类型系统到指针与内存管理，示例完整。",
+              "pages": "1080 页",
+              "updated": "2026-09-25",
+              "tags": ["C", "入门"]
+            }
+          ]
+        },
+        {
+          "id": "exercise",
+          "type": "exercise",
+          "name": "习题",
+          "items": [
+            {
+              "title": "PTA 题解合集",
+              "type": "exercise",
+              "url": "./resource/college/exercise/program-design/PTA 题解合集.md",
+              "desc": "42 道基础题的思路与坑点，含易错样例。",
+              "pages": "42 题",
+              "updated": "2026-10-20",
+              "tags": ["PTA", "题解"]
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "type": "notes",
+          "name": "笔记",
+          "items": [
+            {
+              "title": "C 算法板子笔记",
+              "type": "notes",
+              "url": "./resource/college/notes/program-design/C 算法板子笔记.html",
+              "desc": "排序 / 二分 / 并查集 / 树状数组 / 图论模板合集。",
+              "pages": "13 节",
+              "updated": "2026-11-16",
+              "tags": ["模板", "算法"],
+              "pinned": true
+            },
+            {
+              "title": "C++ STL 速查",
+              "type": "notes",
+              "url": "./resource/college/notes/program-design/C++ STL 速查.html",
+              "desc": "容器、迭代器失效、智能指针与常见坑。",
+              "pages": "14 节",
+              "updated": "2026-11-01",
+              "tags": ["C++", "STL"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "name": "大学英语",
+      "abbr": "英",
+      "color": "#a5652f",
+      "desc": "读写教程 · 四级",
+      "aliases": ["英语", "大英", "四级"],
+      "subgroups": [
+        {
+          "id": "books",
+          "type": "books",
+          "name": "教材",
+          "items": [
+            {
+              "title": "新视野大学英语 读写教程 1",
+              "type": "books",
+              "url": "./resource/college/books/english/新视野大学英语 读写教程1.pdf",
+              "desc": "课文、词汇与课后练习，配听力原文。",
+              "pages": "196 页",
+              "updated": "2026-09-10",
+              "tags": ["读写教程"]
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "type": "notes",
+          "name": "笔记",
+          "items": [
+            {
+              "title": "四级高频词汇 1200",
+              "type": "notes",
+              "url": "./resource/college/notes/english/四级高频词汇1200.html",
+              "desc": "按词频分组，附真题例句。",
+              "pages": "20 组",
+              "updated": "2026-10-12",
+              "tags": ["CET-4", "词汇"]
+            }
+          ]
+        },
+        {
+          "id": "paper",
+          "type": "paper",
+          "name": "论文/试卷",
+          "items": [
+            {
+              "title": "大学英语四级真题（2025.12）",
+              "type": "paper",
+              "url": "./resource/college/paper/english/四级真题2025-12.pdf",
+              "desc": "含答案与听力原文。",
+              "pages": "32 页",
+              "updated": "2026-10-30",
+              "tags": ["真题", "CET-4"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xi-thought",
+      "name": "习近平新时代中国特色社会主义思想概论",
+      "abbr": "政",
+      "color": "#9b3f4e",
+      "desc": "概论 · 期末复习",
+      "aliases": ["习概", "思政", "概论"],
+      "subgroups": [
+        {
+          "id": "books",
+          "type": "books",
+          "name": "教材",
+          "items": [
+            {
+              "title": "习近平新时代中国特色社会主义思想概论",
+              "type": "books",
+              "url": "./resource/college/books/xi-thought/概论教材.pdf",
+              "desc": "课程指定教材。",
+              "pages": "320 页",
+              "updated": "2026-09-05",
+              "tags": ["教材"]
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "type": "notes",
+          "name": "笔记",
+          "items": [
+            {
+              "title": "概论期末复习提纲",
+              "type": "notes",
+              "url": "./resource/college/notes/xi-thought/概论复习提纲.html",
+              "desc": "按章节梳理要点，标注了必背段落。",
+              "pages": "18 节",
+              "updated": "2026-11-10",
+              "tags": ["复习", "提纲"]
+            }
+          ]
+        },
+        {
+          "id": "paper",
+          "type": "paper",
+          "name": "论文/试卷",
+          "items": [
+            {
+              "title": "概论期末试卷（2025 秋）",
+              "type": "paper",
+              "url": "./resource/college/paper/xi-thought/概论期末试卷2025秋.pdf",
+              "desc": "往届真题，暂不公开。",
+              "pages": "6 页",
+              "updated": "2026-11-14",
+              "tags": ["真题"],
+              "draft": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

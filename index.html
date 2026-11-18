@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>书架 · 教材与笔记</title>
+  <meta name="description" content="东师信科课程资料库：教材、习题、笔记、试卷，按学段与学科归档，搜一个关键词就能落到那份文件。">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1110" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="返回首页">
+      <span class="brand-name" id="brandName">书架</span>
+      <small class="brand-kicker" id="brandKicker">LIBRARY</small>
+    </a>
+    <nav class="stages" id="stages" aria-label="学段"></nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="切换深色模式">
+      <span id="themeIcon"></span>
+    </button>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="hero">
+    <p class="eyebrow" id="eyebrow">Textbooks &amp; Notes</p>
+    <h1>教材与笔记，<br>一处存放，<em>随手可取</em>。</h1>
+    <p class="sub">按学段与学科归档，标注格式、体量与更新时间。</p>
+
+    <div class="search" id="search">
+      <span class="search-ico" id="searchIco" aria-hidden="true"></span>
+      <input
+        id="q"
+        type="search"
+        placeholder="搜书名、科目、标签…"
+        autocomplete="off"
+        spellcheck="false"
+        aria-label="搜索资料"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="palette"
+        aria-autocomplete="list"
+      >
+      <kbd class="search-kbd" aria-hidden="true">/</kbd>
+
+      <div class="palette" id="palette" hidden>
+        <ul id="hits" role="listbox" aria-label="搜索结果"></ul>
+        <div class="palette-foot" id="paletteFoot" hidden>
+          <span id="hitCount"></span>
+          <span class="hint">↑↓ 选择 · Enter 打开 · Esc 关闭</span>
+          <span class="r"><button type="button" id="applyAll">在页面中查看全部</button></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="资料类型"></div>
+    <p class="stat" id="stat">正在读取目录…</p>
+  </section>
+
+  <div class="notice" id="notice" hidden></div>
+
+  <section class="recent" id="recentSec" hidden>
+    <div class="section-head">
+      <h2><span class="dot" style="--c:var(--amber)"></span>最近更新</h2>
+      <p class="desc">按日期倒序</p>
+    </div>
+    <div class="recent-row" id="recentRow"></div>
+  </section>
+
+  <div id="groups" aria-live="polite"></div>
+
+</main>
+
+<footer class="site-footer wrap">
+  <div class="site-footer-main">
+    <span id="footStat">—</span>
+    <span class="r">
+      <a id="homeLink" href="https://nav.dongri.work/" target="_blank" rel="noopener">← 回到导航站</a>
+      <a id="repoLink" href="https://github.com/VassagoDongRi/library-nav" target="_blank" rel="noopener">GitHub</a>
+    </span>
+  </div>
+
+  <div class="site-footer-meta">
+    <span id="copyright">© 2026 DongRi</span>
+    <span class="author" id="authorBox" hidden>
+      <span class="author-label">网站作者</span>
+      <a id="authorLink" target="_blank" rel="noopener"></a>
+      <span class="meta-sep" aria-hidden="true">·</span>
+      <a id="authorMail"></a>
+    </span>
+  </div>
+</footer>
+
+<noscript>
+  <div class="wrap">
+    <div class="fatal"><h2>需要开启 JavaScript</h2><p>这个资料库是纯前端页面，目录由 <code>data/*.json</code> 实时渲染。</p></div>
+  </div>
+</noscript>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

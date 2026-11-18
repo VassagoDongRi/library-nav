@@ -1,0 +1,11 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "东师信科课程资料库 · 纯静态前端",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "check": "node tools/check-data.mjs"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "_comment": "高中资料骨架。items 为空时该学科不会显示；往 items 里加条目即可上线，前端无需改动。",
+  "stage": "senior",
+  "name": "高中",
+  "hint": "这个学段还在整理中，先把条目填进 data/senior.json 就会自动出现。",
+  "groups": [
+    {
+      "id": "chinese",
+      "name": "语文",
+      "abbr": "语",
+      "color": "#8a5a2b",
+      "desc": "必修 · 选择性必修",
+      "subgroups": [
+        { "id": "g1", "name": "高一", "items": [] },
+        { "id": "g2", "name": "高二", "items": [] },
+        { "id": "g3", "name": "高三", "items": [] }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "数学",
+      "abbr": "数",
+      "color": "#6b5b95",
+      "desc": "人教 A 版",
+      "subgroups": [
+        { "id": "g1", "name": "高一", "items": [] },
+        { "id": "g2", "name": "高二", "items": [] },
+        { "id": "g3", "name": "高三", "items": [] }
+      ]
+    },
+    {
+      "id": "english-senior",
+      "name": "英语",
+      "abbr": "英",
+      "color": "#a5652f",
+      "desc": "必修 · 选择性必修",
+      "subgroups": [
+        { "id": "g1", "name": "高一", "items": [] },
+        { "id": "g2", "name": "高二", "items": [] },
+        { "id": "g3", "name": "高三", "items": [] }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "物理",
+      "abbr": "物",
+      "color": "#3f6f8a",
+      "desc": "必修 · 选择性必修",
+      "subgroups": [
+        { "id": "g1", "name": "高一", "items": [] },
+        { "id": "g2", "name": "高二", "items": [] },
+        { "id": "g3", "name": "高三", "items": [] }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "化学",
+      "abbr": "化",
+      "color": "#4f7a4f",
+      "desc": "必修 · 选择性必修",
+      "subgroups": [
+        { "id": "g1", "name": "高一", "items": [] },
+        { "id": "g2", "name": "高二", "items": [] },
+        { "id": "g3", "name": "高三", "items": [] }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "生物",
+      "abbr": "生",
+      "color": "#6d7a3f",
+      "desc": "必修 · 选择性必修",
+      "subgroups": [
+        { "id": "g1", "name": "高一", "items": [] },
+        { "id": "g2", "name": "高二", "items": [] },
+        { "id": "g3", "name": "高三", "items": [] }
+      ]
+    }
+  ]
+}
